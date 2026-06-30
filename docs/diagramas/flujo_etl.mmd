@@ -1,0 +1,12 @@
+graph LR
+    Raw[CSV/SQL Origen] --> Ingesta(Extracción)
+    Ingesta --> Limpieza(Limpieza & Escalado)
+    Limpieza --> PCA(Reducción PCA)
+    PCA --> KMeans(Entrenamiento KMeans)
+    KMeans --> Artefactos[Modelos .pkl]
+    KMeans --> Metricas[metricas.json]
+    
+    style Ingesta fill:#fff,stroke:#333
+    style KMeans fill:#dfd,stroke:#333
+    style Artefactos fill:#ff9,stroke:#333
+    style Metricas fill:#ddd,stroke:#333

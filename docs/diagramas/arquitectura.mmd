@@ -1,0 +1,28 @@
+graph TD
+    subgraph Cliente
+        Dashboard[Dashboard Streamlit: 8501]
+    end
+
+    subgraph Backend
+        API[ML-Service: FastAPI]
+        ETL[ETL: train.py]
+    end
+
+    subgraph Persistencia
+        DB[(PostgreSQL)]
+    end
+
+    subgraph Volúmenes
+        Models[(Modelos .pkl)]
+    end
+
+    Dashboard -->|Consulta/Predict| API
+    API -->|Lee Modelos| Models
+    API -->|Consulta| DB
+    ETL -->|Entrena| Models
+    ETL -->|Lee/Escribe| DB
+
+    style Dashboard fill:#f9f,stroke:#333,stroke-width:2px
+    style API fill:#bbf,stroke:#333,stroke-width:2px
+    style ETL fill:#dfd,stroke:#333,stroke-width:2px
+    style DB fill:#ddd,stroke:#333,stroke-width:2px
