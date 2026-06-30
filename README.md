@@ -122,6 +122,10 @@ Eva_3_Data_Science/
 │ ├── train.py
 │ └── requirements.txt
 │
+├── docs/
+│ ├── diagramas/
+│    ├── arquitectura.mmd
+│    └── flujo_etl.mmd
 ├── api/
 │ ├── app.py
 │ └── requirements.txt
