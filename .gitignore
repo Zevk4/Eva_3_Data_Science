@@ -1,0 +1,33 @@
+# SEGURIDAD Y CONFIGURACIÓN
+# ==========================================
+# Ignorar credenciales reales
+.env
+
+# DATOS Y ARCHIVOS DE PROCESAMIENTO
+# ==========================================
+# Ignorar la carpeta de datos procesados
+data/processed/
+
+# ==========================================
+# MODELOS SERIALIZADOS
+# ==========================================
+# Ignorar los binarios generados por el ETL en cada ejecución
+models/*.pkl
+models/*.json
+
+# ==========================================
+# CACHÉ Y ENTORNOS VIRTUALES DE PYTHON
+# ==========================================
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+env/
+.env_python/
+
+# ==========================================
+# SISTEMA OPERATIVO
+# ==========================================
+.DS_Store
+Thumbs.db
